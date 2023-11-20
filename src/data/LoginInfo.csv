@@ -4,12 +4,12 @@ Username,Password,Division,Gender,Firstname,Lastname,Address1,address2,Address3,
 22123456,CS9012,Student,Male, Enda, Cahill ,Blackrock,Dundalk,Louth, 087330873, PE teaching, Teaching
 22876543,CS3456,Student,Female, Kate,Scully,a,b,Wiclow,087431986,AI and Machine learning, CS
 22987654,CS7890,Student,Male,Sean,Murphy,a,b,Dublin,087625190,Construction Managment,Construction
-22222222,CS0000,Department
-22223456,CS8765,Department
-22334567,CS2109,Department
-22445678,CS6543,Department
-22556789,CS0987,Department
-22456789,CS1000,Department
+22222222,CS0000,Student,Male,Adam,Herron,Drimark,Donegal Town,Donegal,1890222222,Computer Systems, CS
+22223456,CS8765,Student,Male,Eddie,Durkin,Castletown,Swinford,Mayo,0853453251,Marketing,Business
+22334567,CS2109,Student,Male,Francis,Higgins,Castletown,Swinford,Mayo,0872912910,Mechanical Engineering,Engineering
+22445678,CS6543,Student,Male,Danny,Malin,Old Kent Street,Mallow,Cork,0871238543,Aeronautical Engineering,Engineering
+22556789,CS0987,Student,Female,Priscilla,Dundee,Pascal Street,Howth,Dublin,0871637496,Computer Systems,CS
+22456789,CS1000,Student,Female,Ciara,Swift,Beach Street,Virginia,Cavan,0853458738,Accounting,Business
 22467890,CS1100,Department
 22478901,CS1200,Department
 22489012,CS1300,Department
