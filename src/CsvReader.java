@@ -7,11 +7,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Utility class that reads data from CSV's.
+ */
 public class CsvReader {
-    // TODO: e.printStackTrace() is generally not the best way to log error
-
+    /**
+     * Reads CSV data from the provided file path.
+     *
+     * @param csvFilePath The path of the CSV file.
+     * @return A list of String arrays representing the data read from the CSV.
+     */
     public List<String[]> CsvSearch (String csvFilePath) {
-        // FIXME: This reads in the header 
 
         final List<String[]> csvData = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
@@ -26,16 +32,30 @@ public class CsvReader {
         return csvData ; 
     }
 
-    public Map<String, Double> readGrade(String fileName){
+    /**
+     * Reads grades data from the provided file path.
+     *
+     * @param fileName The path of the file containing the grades.
+     * @return A map with student usernames as keys and their grades as values.
+     */
+    public Map<String, Double> readGrade(String fileName) {
         Map<String, Double> grades = new HashMap<>();
-        try(BufferedReader br = new BufferedReader(new FileReader(fileName))){
+        boolean firstLine = true;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line;
-            while((line = br.readLine()) != null){
-                grades.put(line.split(",")[0], Double.valueOf(line.split(",")[1]));
+            while ((line = br.readLine()) != null) {
+                if (firstLine) {
+                    firstLine = false;
+                    continue;
+                }
+                String[] parts = line.split(",");
+                grades.put(parts[0], Double.valueOf(parts[1]));
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
         return grades;
     }
 }
